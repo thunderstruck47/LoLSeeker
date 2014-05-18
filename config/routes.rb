@@ -1,5 +1,7 @@
 LoLSeeker::Application.routes.draw do
-  get "users/new"
+  get "static_pages/home"
+  get "static_pages/seekers"
+  get "static_pages/register"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
