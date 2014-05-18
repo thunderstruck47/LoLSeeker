@@ -1,5 +1,7 @@
 LoLSeeker::Application.routes.draw do
-  get "static_pages/home"
+  resources :users
+  root "static_pages#home"
+  match '/register', to: 'users#new', via: 'get'
   get "static_pages/seekers"
   get "static_pages/register"
   # The priority is based upon order of creation: first created -> highest priority.
