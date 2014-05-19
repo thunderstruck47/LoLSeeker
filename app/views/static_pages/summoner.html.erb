@@ -1,0 +1,33 @@
+<script>
+	$('#ohmy').empty();
+	var aut = '9a5ad5f4-91a4-4304-923e-5f530b03a0c4'
+	$('#Region li a').click( function(){
+		var region = $(this).text();
+		var special = document.getElementById('summoner').value.replace(/\s/g, '');
+		$('.jumbotron').empty();
+		var url = "https://prod.api.pvp.net/api/lol/" + region + "/v1.4/summoner/by-name/" + special + "?api_key=" + aut;
+		$.ajax({
+			type: 'GET',
+			url: url,
+			data: {get_param: special.value},
+			dataType: 'json',
+			success: function(data){
+				$.each(data, function(index,element){
+					$('.jumbotron p').append(element.name + " lvl:" + element.summonerLevel);
+				})
+			},
+			error: function(){
+				if (special.length<=2){
+					$('.jumbotron p').append('Summoner names should be longer than 2 characters. Please try again.');
+				}
+				else if (special.length>=50){
+					$('.jumbotron p').append('Summoner names should not be longer than 50 characters. Please try again.');
+				}
+				else{
+					$('.jumbotron p').append('Summoner not found. Please try again or check if you have entered the right region.');
+				}
+			}
+		});	
+	});
+</script>
+<div class="jumbotron"><h4 id="ohmy">Something went wrong. Please try again.</h4><p></p></div>
