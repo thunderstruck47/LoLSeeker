@@ -3,7 +3,7 @@ LoLSeeker::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts, only: [:create, :destroy]
   root "static_pages#home"
-  get "static_pages/posts"
+  match '/psp', to: 'static_pages#pspindex', via: 'get'
   match '/register', to: 'users#new', via: 'get'
   match '/login', to: 'sessions#new', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'delete'

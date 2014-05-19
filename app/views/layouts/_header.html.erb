@@ -11,7 +11,7 @@
 			</form>
 
 			<ul class="nav nav-pills pull-right">
-				<li><button type="button" class="btn btn-warning navbar-btn">Players Seek Players</button></li>
+				<li id="psp"><%= link_to "Players Seek Players", "/psp"%></li>
 				<% if logged_in? %>
 		            <li><%= link_to "Seekers", users_path %></li>
 		            <li id="fat-menu" class="dropdown">
