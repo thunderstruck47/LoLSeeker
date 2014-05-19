@@ -4,9 +4,19 @@
 			<a class="navbar-brand" href="/" id="brand">lolseeker</a>
 			<form class="navbar-form navbar-left" role="search" id="search">
 				<div clas="form-group navbar-left navbar-form">
-					<input type="text" class="form-control" placeholder="Search for summoners">
-					<button type="button" class="btn btn-default navbar-btn" id="button">Submit</button>
-
+					<input type="text" class="form-control" placeholder="Search for summoner" id="summoner">
+					<div class="btn-group">
+					<button type="button" id="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Region<span class='caret'></span></button>
+					<ul  aria-labelledby="dropdownMenu" class="dropdown-menu" id="Region" role="menu">
+						<li><a href='#'>na</a></li>
+						<li><a href='#'>br</a></li>
+						<li><a href='#'>euw</a></li>
+						<li><a href='#'>eune</a></li>
+						<li><a href='#'>lan</a></li>
+						<li><a href='#'>las</a></li>
+						<li><a href='#'>oce</a></li>
+					</ul>
+				</div>
 				</div>
 			</form>
 
