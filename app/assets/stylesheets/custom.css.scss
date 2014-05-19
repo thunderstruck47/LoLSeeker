@@ -63,14 +63,20 @@ textarea{
 
 
 #brand {
-	float: left;
 	margin-left: 2%;
 	font-size:1.7em;
 	color: #fff;
 	text-transform: uppercase;
-	padding-top: 9px;
+	padding-top: auto;
 	font-weight: bold;
-	line-height: 1;
+}
+
+#navright {
+	margin-right:2%;
+	font-size:1.2em;
+	padding-top: 4px;
+
+	
 }
 
 /* footer */
