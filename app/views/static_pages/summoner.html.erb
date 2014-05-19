@@ -6,6 +6,7 @@
 		var special = document.getElementById('summoner').value.replace(/\s/g, '');
 		$('.jumbotron').empty();
 		var url = "https://prod.api.pvp.net/api/lol/" + region + "/v1.4/summoner/by-name/" + special + "?api_key=" + aut;
+		var sumid
 		$.ajax({
 			type: 'GET',
 			url: url,
@@ -13,15 +14,33 @@
 			dataType: 'json',
 			success: function(data){
 				$.each(data, function(index,element){
-					$('.jumbotron p').append(element.name + " lvl:" + element.summonerLevel);
+					$('.jumbotron p').append(region + "   " + element.name + "   " + element.profileIconId +  "    lvl:" + element.summonerLevel);
+					 /*sumid = element.id;
+					alert(sumid); */
 				})
+				/*
+				$.ajax({
+					type: 'GET',
+					url: "https://prod.api.pvp.net/api/lol/" + region + "/v1.3/stats/by-summoner/" + sumid + "/summary?season=SEASON4&api_key=" + aut,
+					data: {get_param: "RankedSolo5x5"},
+					dataType: 'json',
+					success: function(data){
+						$.each(data, function(index,element){
+							alert(element.value);
+						})
+						
+					}
+				
+				})
+				*/
+
 			},
 			error: function(){
 				if (special.length<=2){
 					$('.jumbotron p').append('Summoner names should be longer than 2 characters. Please try again.');
 				}
-				else if (special.length>=50){
-					$('.jumbotron p').append('Summoner names should not be longer than 50 characters. Please try again.');
+				else if (special.length>=40){
+					$('.jumbotron p').append('Summoner names should not be longer than 40 characters. Please try again.');
 				}
 				else{
 					$('.jumbotron p').append('Summoner not found. Please try again or check if you have entered the right region.');

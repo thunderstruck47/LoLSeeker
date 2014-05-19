@@ -1,7 +1,7 @@
 <li>
   <span class="content"><%= post.content %></span>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(post.created_at) %> ago by <% if current_user!=User.find_by(id: post.user_id)%><%= User.find_by(id: post.user_id).name %><%else%>me<%end%>.
+    Posted <%= time_ago_in_words(post.created_at) %> ago by <% if current_user!=User.find_by(id: post.user_id)%><a href="\users\<%=post.user_id%>"> <%= User.find_by(id: post.user_id).name %></a><%else%>me<%end%>.
   </span>
   <% if logged_in?%>
   <% if current_user?(post.user) or current_user.admin?%> 
