@@ -1,7 +1,9 @@
 LoLSeeker::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :posts, only: [:create, :destroy]
   root "static_pages#home"
+  get "static_pages/posts"
   match '/register', to: 'users#new', via: 'get'
   match '/login', to: 'sessions#new', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'delete'

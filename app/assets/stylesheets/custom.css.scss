@@ -1,5 +1,6 @@
 @import "bootstrap";
 $grayLighter : #eaeaea;
+$grayLight : #999;
 
 /* mixins, variables, etc. */
 
@@ -28,6 +29,8 @@ textarea{
 #lol_logo{
 	margin-left: auto;
 }
+
+
 
 #brand {
 	float: left;
@@ -97,6 +100,7 @@ input {
   height: auto !important;
 }
 
+
 #error_explanation {
   color: #f00;
   ul {
@@ -122,5 +126,42 @@ input {
     &:last-child {
       border-bottom: 1px solid $grayLighter;
     }
+  }
+}
+
+#search {
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+#button {
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+/* posts */
+
+.posts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
   }
 }
