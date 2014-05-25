@@ -37,6 +37,7 @@
 
 			},
 			error: function(){
+				$('#ohmy').empty();
 				if (special.length<=2){
 					$('.jumbotron p').append('Summoner names should be longer than 2 characters. Please try again.');
 				}
