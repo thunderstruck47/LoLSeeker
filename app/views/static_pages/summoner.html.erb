@@ -1,5 +1,5 @@
 <script>
-	
+	$('#ohmy').append("Something went wrong. Please try again.");
 	var aut = '9a5ad5f4-91a4-4304-923e-5f530b03a0c4'
 	$('#Region li a').click( function(){
 		var region = $(this).text();
@@ -7,6 +7,7 @@
 		$('.jumbotron').empty();
 		var url = "https://prod.api.pvp.net/api/lol/" + region + "/v1.4/summoner/by-name/" + special + "?api_key=" + aut;
 		var sumid
+		$('#ohmy').empty();
 		$.ajax({
 			type: 'GET',
 			url: url,
@@ -16,6 +17,7 @@
 				$.each(data, function(index,element){
 					$('#ohmy').empty();
 					$('.jumbotron p').append("<div clas=\"container\"><h1><img src=\"http://avatar.leagueoflegends.com/" + region + "/"+ element.name + ".png\" alt=\Summoner Icon\">   " + element.name + "</br><h3>server:" + region + "    lvl:" + element.summonerLevel + "</h3></h1></div>");
+					
 					 /*sumid = element.id;
 					alert(sumid); */
 				})
@@ -51,4 +53,4 @@
 		});	
 	});
 </script>
-<h4 id="ohmy">Something went wrong. Please try again.</h4><div class="jumbotron"><img id="icon"><p></p></div>
+<h4 id="ohmy"></h4><div class="jumbotron"><img id="icon"><p></p></div>
