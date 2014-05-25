@@ -14,7 +14,7 @@
 			dataType: 'json',
 			success: function(data){
 				$.each(data, function(index,element){
-					$('.jumbotron p').append(region + "   " + element.name + "   " + element.profileIconId +  "    lvl:" + element.summonerLevel);
+					$('.jumbotron p').append("<div clas=\"container\"><h1><img src=\"http://avatar.leagueoflegends.com/" + region + "/"+ element.name + ".png\" alt=\Summoner Icon\">   " + element.name + "</br><h3>server:" + region + "    lvl:" + element.summonerLevel + "</h3></h1></div>");
 					 /*sumid = element.id;
 					alert(sumid); */
 				})
@@ -49,4 +49,4 @@
 		});	
 	});
 </script>
-<div class="jumbotron"><h4 id="ohmy">Something went wrong. Please try again.</h4><p></p></div>
+<div class="jumbotron"><h4 id="ohmy">Something went wrong. Please try again.</h4><img id="icon"><p></p></div>

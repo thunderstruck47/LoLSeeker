@@ -1,0 +1,19 @@
+* b3684ed : final commit for now
+* b8c72cd : added google translate button
+* 20db294 : fix
+* 578a2ee : added the seeker page and a bit of ajax
+* d228cfd : one small step idd a huge leap
+* c9844ec : fixed few bugs
+* 4b723df : players seek players feature embeded, provided admin access to posts
+* 6931ec2 : added simple post function
+* 4db9b98 : hotfix
+* 30ae023 : finished with user features, admins can now delete profiles
+* 1945099 : fixed few bugs for loging out
+* 4c253c1 : users can now register, log in, log out, and the layout changes
+* 737855f : making the website deployable on heroku
+* 8ba770e : created working register form
+* 5ee9d06 : created footer and header default layouts
+* 666f4a1 : added simple static pages tests
+* 2138ff5 : added staticpages controller and simple default layout
+* 6b8c4fc : created a basic user model, rspec tests for user model, and secure passwords using bcrypt gem
+* f9c11a8 : Initial commit, using RSPEC as TDE
